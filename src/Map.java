@@ -4,6 +4,5 @@ public class Map {
     int get3[];
 
     public Map(int x,int y) {
-
     }
 }
