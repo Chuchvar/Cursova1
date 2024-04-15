@@ -4,11 +4,9 @@ public class Map {
     private int get3[][];
 
     public Map(int x,int y){
-        int map[][]=new int[x][y];
-        for (int i=0;i<=x;i++){
-            for (int j=0;j<=y;j++){
-                map[i][j]=0;
-            }
+        int map[][]=new int[x][];
+        for (int r=0;r<x;r++){
+            map[r]=new int[y];
         }
         System.out.println(map);
     }
