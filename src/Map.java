@@ -33,15 +33,15 @@ public class Map {
         return map3;
     }
 
-    public void setmap3(int[][] map2) {
-        this.map3 = map2;
+    public void setmap3(int[][] map3) {
+        this.map3 = map3;
     }
 
     public int[][] getmap2() {
         return map2;
     }
 
-    public void setGer2(int[][] map2) {
+    public void setmap2(int[][] map2) {
         this.map2 = map2;
     }
 
@@ -49,10 +49,17 @@ public class Map {
         return map1;
     }
 
-    public void setGet3(int[][] map1) {
+    public void setmap1(int[][] map1) {
         this.map1 = map1;
     }
-    public void setGetf(int h) {
+    public String[][] getmap() {
+        return map;
+    }
+
+    public void setmap(int[][] map1) {
+        this.map = map;
+    }
+    public void getmapf(int h) {
         for (int r = 0; r < h; r++) {
             System.out.println(Arrays.toString(map[r]));
         }
