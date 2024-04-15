@@ -4,6 +4,13 @@ public class Map {
     private int get3[][];
 
     public Map(int x,int y){
+        int map[][]=new int[x][y];
+        for (int i=0;i<=x;i++){
+            for (int j=0;j<=y;j++){
+                map[i][j]=0;
+            }
+        }
+        System.out.println(map);
     }
 
     public int[][] getGer() {
