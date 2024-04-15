@@ -1,11 +1,11 @@
 import java.util.Arrays;
 
 public class Map {
-    private int map1[][];
-    private int map2[][];
-    private int map3[][];
-    private String map[][];
-    public Map(int x,int y){
+    private int map1[][];//карта індексів
+    private int map2[][];//карта висот
+    private int map3[][];//карта грунту
+    private String map[][];//карта обєктів
+    public Map(int x,int y){//генерація карти
         map1=new int[x][];
         map2=new int[x][];
         map3=new int[x][];
