@@ -6,12 +6,12 @@ public class World {
     ArrayList fruits = new ArrayList<>();
     ArrayList fruits2 = new ArrayList<>();
 
-    public World(int n,int x) {
+    public World(int n,int x) { // конструктор, який генериє світ  в залежності від даної інформації
         for (int i=0;i<x;i++) {
             Soldier a = new Soldier();
             fruits.add(a);
             Soldier a2 = new Soldier();
-            fruits.add(a2);
+            fruits2.add(a2);
 
         }
         this.tarra = new Map(n,n);
