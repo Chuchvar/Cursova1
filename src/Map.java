@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Map {
     private int map1[][];//карта індексів
     private int map2[][];//карта висот
-    private int map3[][];//карта грунту
+    private int map3[][];//карта грун
     private String map[][];//карта обєктів
     public Map(int x,int y){//генерація карти
         map1=new int[x][];

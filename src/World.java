@@ -3,12 +3,16 @@ public class World {
     Map terra;
     int time;
     ArrayList team1 = new ArrayList<>();//команда 1
-    ArrayList team2 = new ArrayList<>();//команда 2
+    ArrayList team2 = new ArrayList<>();//команда// 2
+    int x;
+    int y;
+    int n;
 
-    public World(int n,int x) { // конструктор, який генериє світ  в залежності від даної інформації
-        this.terra = new Map(n,n);
 
-        for (int i=0;i<x/2;i++) {
+    public World(int n,int x,int y) { // конструктор, який генериє світ  в залежності від даної інформації
+        this.terra = new Map(x,y);
+
+        for (int i=0;i<n/2;i++) {
             Soldier a = new Soldier(1+i,1);
             terra.getspan(1+i,1,"Solider",1+i);
             team1.add(a);
@@ -17,7 +21,11 @@ public class World {
             team2.add(a2);
         }
 
-        terra.getmapf(n);
+        terra.getmapf(x);
         this.time = 0;
+    }
+    public void moment() {
+
+
     }
 }

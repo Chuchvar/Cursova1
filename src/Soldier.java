@@ -10,12 +10,13 @@ public class Soldier {
     }
 
     void step(int rad){//крок
+
         y+=Math.cos(rad/2);
         x+=Math.sin(rad);
     }
-    void stepStraight(int rad){//крок
-        y+=2*Math.cos(rad/2);
-        x+=2*Math.sin(rad);
+    void stepStraight(){//крок
+        y+=2*Math.cos(r/2);
+        x+=2*Math.sin(r);
     }
     public int getX() {
         return x;
