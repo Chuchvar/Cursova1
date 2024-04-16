@@ -20,7 +20,8 @@ public class World {
             terra.getspan(n-1,n-1-i,"Solider",1+i);
             team2.add(a2);
         }
-        terra.getmapf(n);
+        terra.getspamTree(33);
+        terra.getmapf(x);
         this.time = 0;
     }
     public void moment() {
