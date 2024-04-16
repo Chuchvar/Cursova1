@@ -51,7 +51,7 @@ public class Map {
         creatdirt();
     }
     public void shopmap1(int h){
-        getcreatdirt();
+        System.out.println("вивід:");
         for (int r = 0; r < h; r++) {
             System.out.println(Arrays.toString(map1[r]));
         }

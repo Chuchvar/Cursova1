@@ -21,21 +21,25 @@ public class World {
             team2.add(a2);
         }
         terra.getspamTree(33);
-        terra.getmapf(x);
+        terra.shopmap1(x);
         this.time = 0;
+        this.x=x;
+        this.y=y;
     }
     public void moment() {
-        movement(7);
-
+        for (int i=0;i<100;i++) {
+            for (int i2=0;i2<3;i2++) {
+                movement(i2);
+            }
+        }
+        terra.shopmap1(x);
     }
     public void movement(int ip){
-        Soldier a=((Soldier) team1.get(7));
+        Soldier a=((Soldier) team1.get(ip));
         double yt=a.getX();
         double xt=a.getY();
-        yt+=Math.cos(a.getR())/5;
-        xt += Math.sin(a.getR())/5;
+        if(terra.setmap((int)xt,(int)yt)=="null"){
 
-        if(){
             a.step(1);
         }else{
 
