@@ -2,14 +2,14 @@ public class Soldier {
     private int x;//координати по х
     private int y;//координати по y
     private Xp live;
-    private int r;//кут погляду
-
+    private double r;//кут погляду
     public Soldier(int x, int y) {
         this.x = x;
         this.y = y;
+        r=0;
     }
 
-    void step(int rad){//крок
+    void step(double rad){//крок
 
         y+=Math.cos(rad/2);
         x+=Math.sin(rad);

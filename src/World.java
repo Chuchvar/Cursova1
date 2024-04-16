@@ -25,7 +25,18 @@ public class World {
         this.time = 0;
     }
     public void moment() {
+        movement(7);
 
+    }
+    public void movement(int ip){
+        Soldier a=((Soldier) team1.get(7));
+        int yt=a.getX();
+        int xt=a.getY();
+        if(1==1){
+            a.step(1);
+        }else{
+
+        }
 
     }
 }
