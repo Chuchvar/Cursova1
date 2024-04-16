@@ -1,6 +1,6 @@
 public class Soldier {
-    private int x;//координати по х
-    private int y;//координати по y
+    private double x;//координати по х
+    private double y;//координати по y
     private Xp live;
     private double r;//кут погляду
     public Soldier(int x, int y) {
@@ -11,14 +11,14 @@ public class Soldier {
 
     void step(double rad){//крок
 
-        y+=Math.cos(rad/2);
-        x+=Math.sin(rad);
+        y+=(Math.cos(rad/2))/10;
+        x+=(Math.sin(rad))/10;
     }
     void stepStraight(){//крок
-        y+=2*Math.cos(r/2);
-        x+=2*Math.sin(r);
+        y+=Math.cos(r/2)/5;
+        x+=Math.sin(r)/5;
     }
-    public int getX() {
+    public double getX() {
         return x;
     }
 
@@ -26,11 +26,15 @@ public class Soldier {
         this.x = x;
     }
 
-    public int getY() {
+    public double getY() {
         return y;
     }
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public double getR() {
+        return r;
     }
 }

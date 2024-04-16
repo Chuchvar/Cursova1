@@ -30,9 +30,12 @@ public class World {
     }
     public void movement(int ip){
         Soldier a=((Soldier) team1.get(7));
-        int yt=a.getX();
-        int xt=a.getY();
-        if(1==1){
+        double yt=a.getX();
+        double xt=a.getY();
+        yt+=Math.cos(a.getR())/5;
+        xt += Math.sin(a.getR())/5;
+
+        if(){
             a.step(1);
         }else{
 
