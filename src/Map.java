@@ -35,7 +35,7 @@ public class Map {
         for (int i =0;i<map.length;i++){
             for (int j=0;j<map[i].length;j++){
                 int random=(int)(Math.random()*forest);
-                if (random==1 && map[i][j]!="Solider"){
+                if (random==1 && map[i][j]=="null"){
                     map[i][j]="Tree";
                 }
             }
@@ -43,14 +43,15 @@ public class Map {
 
     }
     private  void creatdirt(){
-        int x = (int) Math.random()*map3.length;
-        int y =(int)Math.random()*map3.length;
+        int x = (int) (Math.random())*map3.length;
+        int y =(int)(Math.random())*map3.length;
         map3[x][y]=80;
     }
     public void getcreatdirt(){
         creatdirt();
     }
     public void shopmap3(int h){
+        getcreatdirt();
         for (int r = 0; r < h; r++) {
             System.out.println(Arrays.toString(map3[r]));
         }
@@ -60,31 +61,36 @@ public class Map {
             System.out.println(Arrays.toString(map[r]));
         }
     }
-    private void showmap(int x,int y){
+    public String setmap(int x,int y){
+        return map[x][y];
+    }
+    public int setmap1(int x,int y){
+        return map1[x][y];
+    }
+    public int setmap2(int x,int y){
+        return map2[x][y];
+    }
+    public int setmap3(int x,int y){
+        return map3[x][y];
+    }
+    public int sethitnox(int x,int y){
+        return hitbox[x][y];
+    }
+    public  void showHitBox(int x,int y){
+        System.out.println(hitbox[x][y]);
+    }
+    public void showmap(int x,int y){
         System.out.println(map[x][y]);
     }
-    public void getshowmap(int i,int j){
-        showmap(i,j);
-    }
-    private void showmap1(int x,int y){
+    public void showmap1(int x,int y){
         System.out.println(map1[x][y]);
     }
-    public void getshowmap1(int i,int j){
-        showmap1(i,j);
-    }
-    private void showmap2(int x,int y){
+    public void showmap2(int x,int y){
         System.out.println(map2[x][y]);
     }
-    public void getshowmap2(int i,int j){
-        showmap2(i,j);
-    }
-    private void showmap3(int x,int y){
+    public void showmap3(int x,int y){
         System.out.println(map3[x][y]);
     }
-    public void getshowmap3(int i,int j){
-        showmap3(i,j);
-    }
-
     public void getspamTree(int size){
         spamTree(size);
     }
