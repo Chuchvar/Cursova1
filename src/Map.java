@@ -43,12 +43,24 @@ public class Map {
 
     }
     private  void creatdirt(){
-        int x = (int) (Math.random())*map3.length;
-        int y =(int)(Math.random())*map3.length;
+        int x = (int) (Math.random()*map3.length);
+        int y =(int)(Math.random()*map3.length);
         map3[x][y]=80;
     }
     public void getcreatdirt(){
         creatdirt();
+    }
+    public void shopmap1(int h){
+        getcreatdirt();
+        for (int r = 0; r < h; r++) {
+            System.out.println(Arrays.toString(map1[r]));
+        }
+    }
+    public void shopmap2(int h){
+        getcreatdirt();
+        for (int r = 0; r < h; r++) {
+            System.out.println(Arrays.toString(map2[r]));
+        }
     }
     public void shopmap3(int h){
         getcreatdirt();
