@@ -13,11 +13,11 @@ public class World {
         this.terra = new Map(x,y);
 
         for (int i=0;i<n/2;i++) {
-            Soldier a = new Soldier(1+i,1);
-            terra.getspan(1+i,1,"Solider",1+i);
+            Soldier a = new Soldier(2+i,5);
+            terra.getspan(2+i,5,"Solider",1+i);
             team1.add(a);
-            Soldier a2 = new Soldier(n-1,n-1-i);
-            terra.getspan(n-1,n-1-i,"Solider",1+i);
+            Soldier a2 = new Soldier(n,n-i);
+            terra.getspan(n+2,n+i,"Solider",1+i);
             team2.add(a2);
         }
         terra.getspamTree(33);
@@ -27,20 +27,25 @@ public class World {
         this.y=y;
     }
     public void moment() {
-        for (int i=0;i<100;i++) {
-            for (int i2=0;i2<3;i2++) {
-                movement(i2);
-            }
+        for (int i=0;i<40;i++) {
+                movement(2);
         }
         terra.shopmap1(x);
     }
     public void movement(int ip){
         Soldier a=((Soldier) team1.get(ip));
-        double yt=a.getX();
-        double xt=a.getY();
-        if(terra.setmap((int)xt,(int)yt)=="null"){
-
-            a.step(1);
+        double yt=a.getY();
+        double xt=a.getX();
+        if(terra.setmap1((int)xt,(int)yt)==0) {
+            terra.setmap1((int)a.getx(),(int)a.gety(),0);
+            a.stepStraight();
+            terra.setmap1((int)a.getx(),(int)a.gety(),ip+1);
+            team1.set(ip,a);
+            System.out.println("xt="+xt);
+        } else if (terra.setmap1((int) xt, (int) yt) == ip+1) {
+            a.stepStraight();
+            System.out.println("xtts="+xt);
+            team1.set(ip,a);
         }else{
 
         }

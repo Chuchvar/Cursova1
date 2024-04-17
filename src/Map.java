@@ -24,8 +24,8 @@ public class Map {
         System.out.println("Ніхуя");
     }
     private void  spawn(int x,int y,String object,int object_int) { // розміщує об'єк солдат на матриці
-        map[x-1][y-1]=object;
-        map1[x-1][y-1]=object_int;
+        map[x][y]=object;
+        map1[x][y]=object_int;
 
     }
     public void getspan(int j,int t,String objectget,int object_int){
@@ -53,7 +53,10 @@ public class Map {
     public void shopmap1(int h){
         System.out.println("вивід:");
         for (int r = 0; r < h; r++) {
-            System.out.println(Arrays.toString(map1[r]));
+            for (int r2 = 0; r2 < h; r2++) {
+                System.out.print(map1[r2][r]);
+            }
+            System.out.println();
         }
     }
     public void shopmap2(int h){
@@ -78,6 +81,9 @@ public class Map {
     }
     public int setmap1(int x,int y){
         return map1[x][y];
+    }
+    public void setmap1(int x,int y,int i){
+        map1[x][y]=i;
     }
     public int setmap2(int x,int y){
         return map2[x][y];
