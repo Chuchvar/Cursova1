@@ -5,6 +5,8 @@ public class Soldier {
     private double r;//кут погляду
     private double xx=0.2;
     private double yy=0.2;
+    private double z1=1.75;
+    private double z2=0.2;
     public Soldier(int x, int y) {
         this.x = x;
         this.y = y;
@@ -20,6 +22,15 @@ public class Soldier {
         y+=Math.sin(r)/5;
         x+=Math.cos(r)/5;
     }
+    void stepStraightReturn(int xt,int yt) {//крок
+        if (xt != (int) x) {
+            x -= Math.cos(r) / 5;
+        }
+        if (yt != (int) y) {
+            y -= Math.sin(r) / 5;
+        }
+    }
+
     public double getX() {
         if (Math.sin(r) >= 0) {
             return x + Math.cos(r) / 5+xx;
@@ -50,6 +61,7 @@ public class Soldier {
             return y + Math.sin(r) / 10-yy;
         }
     }
+
 
     public double getx() {
         return x;
