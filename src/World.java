@@ -97,7 +97,23 @@ public class World {
         }
         return false;
     }//
-    public boolean movementV2shot(double x,double y,double x2,double y2) {
+    public void shot(double xx,double yy,double z) {
+        double x = xx;
+        double y = yy;
+        double zz=z;
+        double a=-0.1;
+        double ss=1.1;
+        int i=0;
+        while (zz> terra.setmap2((int)xx, (int)yy)){
+            movementV3shot(xx, yy);
+            ss*=1.007;
+            a+=0.000002*ss;
+            zz-=a;
+            System.out.println(zz+" "+i);
+            i++;;
+        }
+    }
+    public boolean collisionshot(double x,double y,double x2,double y2) {
         int x1 = (int) (x + x2);
         int y1 = (int) (y + y2);
         String a1 = terra.setmap(x1, y1);
@@ -124,12 +140,11 @@ public class World {
         boolean a4= collision(x,y,0.5,0.5);
         return a1|a2|a3|a4;
     }
-    public int movementV3shot(double x,double y){
-        collision(x,y,-0.5,-0.5);
-        collision(x,y,0.5,-0.5);
-        collision(x,y,-0.5,0.5);
-        collision(x,y,0.5,0.5);
-        return 1;
+    public void movementV3shot(double x,double y){
+        collisionshot(x,y,-0.5,-0.5);
+        collisionshot(x,y,0.5,-0.5);
+        collisionshot(x,y,-0.5,0.5);
+        collisionshot(x,y,0.5,0.5);
     }
 
 }

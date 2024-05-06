@@ -3,6 +3,7 @@
 public class Main {
     public static void main(String[] args) {
         World word =new World(10,10000,10000);
+        word.shot(10,10,100);
         //word.moment();
         //Map map =new Map(6,6);
        // map.shopmap3(6);
