@@ -30,6 +30,10 @@ public class Soldier {
             y -= Math.sin(r) / 5;
         }
     }
+    void stepStraightReturn() {//крок
+        x -= Math.cos(r) / 25;
+        y -= Math.sin(r) / 25;
+    }
 
     public double getX() {
         if (Math.sin(r) >= 0) {
@@ -81,5 +85,9 @@ public class Soldier {
 
     public double getR() {
         return r;
+    }
+
+    public void setR(double r) {
+        this.r = r;
     }
 }
